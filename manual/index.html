@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tiny App Suite operations manual — sign in, inventory, purchasing, production, and more. Tablet-first guide for Tiny Healthy Family Cafe."
+    />
+    <title>Tiny App Suite — Operations Manual</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="sidebar">
+        Menu
+      </button>
+      <a href="#" class="site-logo"><span>T</span> Tiny App Suite</a>
+      <div class="header-search search-wrap">
+        <input type="search" id="doc-search" placeholder="Search manual…" aria-label="Search documentation" />
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar" id="sidebar" aria-label="Documentation navigation">
+        <p class="nav-group-label">Getting started</p>
+        <nav>
+          <a href="#intro">Introduction</a>
+          <a href="#reload-sync">Reload &amp; Sync</a>
+          <a href="#navigation">Navigation</a>
+          <a href="#sign-in">Sign in with Google</a>
+          <a href="#home">Home</a>
+        </nav>
+        <p class="nav-group-label">1. Dashboard</p>
+        <nav>
+          <a href="#dashboard">Dashboard overview</a>
+          <a href="#reports">Reports</a>
+          <a href="#cogs">COGS calculator</a>
+        </nav>
+        <p class="nav-group-label">2. Purchasing</p>
+        <nav>
+          <a href="#purchase-order">Purchase order</a>
+          <a href="#po-receive">PO receive</a>
+          <a href="#expenses">Expenses</a>
+        </nav>
+        <p class="nav-group-label">3–6. Operations</p>
+        <nav>
+          <a href="#production">Production</a>
+          <a href="#sales-inventory">Sales inventory</a>
+          <a href="#stock-opname">Stock opname</a>
+          <a href="#opname-approval">Opname approval</a>
+          <a href="#stock-on-hand">Stock on hand</a>
+          <a href="#stock-movement">Stock movement</a>
+          <a href="#warnings">Warning log</a>
+          <a href="#waste">Waste</a>
+        </nav>
+        <p class="nav-group-label">Settings</p>
+        <nav>
+          <a href="#master-data">Master data</a>
+          <a href="#admin-panel">Admin panel</a>
+          <a href="#app-settings">App settings</a>
+          <a href="#appendix">Appendix</a>
+        </nav>
+      </aside>
+
+      <main class="main">
+        <header class="hero reveal is-visible" id="intro">
+          <h1>Operations Manual</h1>
+          <p class="lead">
+            Step-by-step guide for Tiny App Suite on tablet (APK). Covers every module from sign-in through
+            settings. Optimized for Tiny Healthy Family Cafe staff and managers.
+          </p>
+          <div class="badges">
+            <span class="badge badge--accent">Tablet first</span>
+            <span class="badge">Dark UI</span>
+            <span class="badge">v1.0</span>
+          </div>
+        </header>
+
+        <section class="doc-section reveal" id="reload-sync">
+          <h2>Reload &amp; Sync</h2>
+          <p>
+            Most data screens show a <strong>sync bar</strong> at the top. Use it throughout your shift so data
+            stays current and your entries reach the server.
+          </p>
+          <ul>
+            <li><strong>Reload</strong> — download the latest data from the server.</li>
+            <li><strong>Sync</strong> — upload pending changes from this device.</li>
+            <li><strong>Pending count</strong> — unsynced items; aim for <strong>0</strong> before end of shift.</li>
+          </ul>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img
+                src="images/sync-bar.png"
+                alt="Sync bar with Reload, Sync, and pending count"
+                width="800"
+                height="120"
+              />
+            </div>
+            <figcaption>Sync bar on any data screen</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="navigation">
+          <h2>Navigation</h2>
+          <ul>
+            <li><strong>Top bar</strong> — Tiny logo (tap → Home), screen title, menu ☰.</li>
+            <li><strong>Menu</strong> — sections 1–6 plus Master data, Admin panel, App settings (by role).</li>
+            <li><strong>Large tablet (landscape)</strong> — side panel may stay open; use minimize to collapse.</li>
+          </ul>
+          <div class="callout callout--web">
+            <strong>On web:</strong> navigation uses the ☰ flyout menu; barcode features are disabled on several
+            screens (see each module).
+          </div>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/nav-menu.png" alt="Navigation menu with sections 1 through 6" width="800" height="500" />
+            </div>
+            <figcaption>Full navigation menu open</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="sign-in">
+          <h2>Sign in with Google</h2>
+          <p>You must sign in before business data appears. Use the Google account that matches your admin invite.</p>
+          <h3>How to sign in (tablet)</h3>
+          <ol class="steps">
+            <li>Open the app on the tablet.</li>
+            <li>Tap <strong>Continue with Google</strong>.</li>
+            <li>Choose the invited Google account.</li>
+            <li>Complete sign-in if a browser opens.</li>
+            <li>Wait until <strong>Finishing sign-in…</strong> clears.</li>
+            <li>You should land on <strong>Home</strong>.</li>
+          </ol>
+          <div
+            class="carousel reveal-img"
+            data-carousel
+            tabindex="0"
+            aria-label="Sign-in walkthrough slideshow"
+          >
+            <div class="carousel-header">
+              <p class="carousel-title">Sign-in walkthrough</p>
+            </div>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/login-01.png" alt="Login screen with Continue with Google" width="800" height="500" />
+                  </div>
+                  <figcaption>Step 1 — Login screen</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/login-02.png" alt="Home screen after successful sign-in" width="800" height="500" />
+                  </div>
+                  <figcaption>Step 2 — Home after sign-in</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img
+                      src="images/login-access-pending.png"
+                      alt="Access pending screen with Sign out"
+                      width="800"
+                      height="500"
+                    />
+                  </div>
+                  <figcaption>Step 3 — Access pending (if no role assigned)</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button type="button" class="carousel-btn" data-carousel-prev aria-label="Previous step">Previous</button>
+              <div class="carousel-dots" role="tablist"></div>
+              <span class="carousel-counter" data-carousel-counter>1 / 3</span>
+              <button type="button" class="carousel-btn" data-carousel-next aria-label="Next step">Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section reveal" id="home">
+          <h2>Home</h2>
+          <p>
+            Home is an <strong>overview of every module</strong>. It links to Dashboard, Purchasing, Production,
+            Inventory, Waste, and Settings, and provides global Reload / Sync.
+          </p>
+          <h3>Section cards</h3>
+          <ul>
+            <li><strong>1. Dashboard</strong> — Dashboard, Reports, COGS</li>
+            <li><strong>2. Purchasing</strong> — PO (Kitchen/Bar/Retail), PO receive, Expenses</li>
+            <li><strong>3. Production</strong></li>
+            <li><strong>4. Sales inventory</strong> <em>(manager/admin)</em></li>
+            <li><strong>5. Inventory</strong> — opname, approval, on hand, movements, warnings</li>
+            <li><strong>6. Waste</strong> — Kitchen / Bar / Retail</li>
+            <li><strong>Settings &amp; admin</strong> — Master data, Admin panel, App settings</li>
+          </ul>
+          <ol class="steps">
+            <li>At shift start, tap <strong>Reload</strong>, then <strong>Sync</strong> if pending &gt; 0.</li>
+            <li>Tap the module you need.</li>
+            <li>Optional: <strong>Show full menu</strong> for the complete nav list on one page.</li>
+          </ol>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/home-full.png" alt="Home screen with all section cards" width="800" height="500" />
+            </div>
+            <figcaption>Home with section cards 1–6</figcaption>
+          </figure>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/home-menu-expanded.png" alt="Home with Show full menu expanded" width="800" height="500" />
+            </div>
+            <figcaption>Show full menu expanded</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="dashboard">
+          <h2>Dashboard</h2>
+          <p>
+            Visual analytics: <strong>inventory</strong>, <strong>production</strong>, and <strong>waste</strong> pie
+            charts. Pick dates and filters; open fullscreen; export CSV/PDF where allowed.
+          </p>
+          <div class="callout callout--role">
+            <strong>Manager/admin only:</strong> Sales and COGS charts on Dashboard; chart PDF export. Staff may export
+            chart CSV where enabled.
+          </div>
+
+          <h3>Inventory</h3>
+          <p><strong>Inventory Calendar</strong> — <em>All</em> or pick a single date. <strong>Inventory charts</strong> (Kitchen, Bar, Retail):</p>
+          <table>
+            <thead>
+              <tr><th>Control</th><th>Options</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Mode</td><td><code>qty</code> or <code>value</code> (Rupiah)</td></tr>
+              <tr><td>Group by</td><td>Kategori · Sub Kategori · Nama Produk</td></tr>
+            </tbody>
+          </table>
+          <ol class="steps">
+            <li>Open <strong>Dashboard</strong>.</li>
+            <li>Set <strong>Inventory Calendar</strong> (All or date).</li>
+            <li>Choose <strong>Mode: qty</strong> or <strong>value</strong>.</li>
+            <li>Tap <strong>Kategori</strong>, <strong>Sub Kategori</strong>, or <strong>Nama Produk</strong>.</li>
+            <li>Tap a chart for fullscreen; export from the card if available.</li>
+          </ol>
+
+          <div class="carousel reveal-img" data-carousel tabindex="0" aria-label="Dashboard inventory slideshow">
+            <div class="carousel-header"><p class="carousel-title">Dashboard — Inventory charts</p></div>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/dashboard-inv-calendar.png" alt="Inventory calendar All and date picker" width="800" height="400" />
+                  </div>
+                  <figcaption>Inventory calendar</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/dashboard-inv-filters.png" alt="Mode qty value and Kategori Sub Kategori Nama Produk" width="800" height="400" />
+                  </div>
+                  <figcaption>Mode and group-by filters</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/dashboard-inv-kitchen-pie.png" alt="Kitchen inventory pie chart" width="800" height="450" />
+                  </div>
+                  <figcaption>Kitchen inventory pie</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/dashboard-chart-fullscreen.png" alt="Chart fullscreen view" width="800" height="500" />
+                  </div>
+                  <figcaption>Chart fullscreen</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/dashboard-chart-export.png" alt="Chart CSV and PDF export buttons" width="800" height="400" />
+                  </div>
+                  <figcaption>Chart export</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button type="button" class="carousel-btn" data-carousel-prev>Previous</button>
+              <div class="carousel-dots"></div>
+              <span class="carousel-counter" data-carousel-counter>1 / 5</span>
+              <button type="button" class="carousel-btn" data-carousel-next>Next</button>
+            </div>
+          </div>
+
+          <h3>Production (on Dashboard)</h3>
+          <p><strong>Production Calendar</strong> — Single Day or Date Range. Charts: Products qty/value, Ingredients qty/value.</p>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/dashboard-production.png" alt="Production calendar and production charts" width="800" height="500" />
+            </div>
+            <figcaption>Production calendar and charts</figcaption>
+          </figure>
+
+          <h3>Waste (on Dashboard)</h3>
+          <p>Same filters as inventory: Waste Calendar, Mode qty/value, group by category — Kitchen / Bar / Retail waste pies.</p>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/dashboard-waste.png" alt="Waste calendar and waste pie chart" width="800" height="500" />
+            </div>
+            <figcaption>Waste charts</figcaption>
+          </figure>
+
+          <h3>Sales &amp; COGS (on Dashboard)</h3>
+          <div class="callout callout--role"><strong>Manager/admin only.</strong></div>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/dashboard-sales.png" alt="Sales date range and sales pie chart" width="800" height="500" />
+            </div>
+            <figcaption>Sales chart</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="reports">
+          <h2>Reports</h2>
+          <p>Export <strong>tables</strong> (not charts). Choose a report type, then a date or range, then export.</p>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Report</th><th>Date</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>inventory totals</td><td>Single on-hand date</td></tr>
+                <tr><td>waste, movements, production summary/detail, purchase orders</td><td>Date range</td></tr>
+                <tr><td>sales</td><td>Range + group by — manager/admin</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Export:</strong> CSV and Excel (all with access); PDF and Share PDF (manager/admin).</p>
+          <ol class="steps">
+            <li>Open <strong>Reports</strong> and tap a report chip.</li>
+            <li>Pick single date or start/end range on the calendar.</li>
+            <li>For sales, set group by product / category / subcategory.</li>
+            <li>Confirm row count, then export.</li>
+          </ol>
+          <div class="carousel reveal-img" data-carousel tabindex="0" aria-label="Reports export slideshow">
+            <div class="carousel-header"><p class="carousel-title">Reports — export flow</p></div>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/reports-chips.png" alt="Report type chips at top of Reports screen" width="800" height="400" />
+                  </div>
+                  <figcaption>Report type chips</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/reports-date-single.png" alt="On-hand date picker for inventory totals" width="800" height="400" />
+                  </div>
+                  <figcaption>Single date (inventory totals)</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/reports-date-range.png" alt="Date range picker" width="800" height="400" />
+                  </div>
+                  <figcaption>Date range</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/reports-export-buttons.png" alt="Export CSV Excel PDF Share PDF buttons" width="800" height="350" />
+                  </div>
+                  <figcaption>Export buttons</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/reports-preview.png" alt="Row count ready to export and preview lines" width="800" height="400" />
+                  </div>
+                  <figcaption>Preview row count</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button type="button" class="carousel-btn" data-carousel-prev>Previous</button>
+              <div class="carousel-dots"></div>
+              <span class="carousel-counter" data-carousel-counter>1 / 5</span>
+              <button type="button" class="carousel-btn" data-carousel-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section reveal" id="cogs">
+          <h2>COGS calculator</h2>
+          <div class="callout callout--role"><strong>Manager/admin only.</strong></div>
+          <p>
+            Cost of goods sold for <strong>Food</strong>, <strong>Beverage</strong>, or <strong>Retail</strong> between
+            opening and closing on-hand dates.
+          </p>
+          <ol class="steps">
+            <li>Open <strong>COGS</strong> from Home or menu.</li>
+            <li>Set <strong>Opening</strong> and <strong>Closing</strong> dates.</li>
+            <li>Select segment tab.</li>
+            <li>Review the calculation table; Reload if stale.</li>
+          </ol>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/cogs-dates.png" alt="COGS opening closing dates and segment tabs" width="800" height="450" />
+            </div>
+            <figcaption>COGS date and segment selectors</figcaption>
+          </figure>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/cogs-table.png" alt="COGS results table with percentages" width="800" height="500" />
+            </div>
+            <figcaption>COGS results</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="purchase-order">
+          <h2>Purchase order (Kitchen · Bar · Retail)</h2>
+          <p>
+            Same screen for all sections; products and budget differ. Create POs, scan barcodes on tablet, export PDF
+            for suppliers.
+          </p>
+          <div class="callout callout--web">
+            <strong>On web:</strong> barcode scanner disabled — use product search only.
+          </div>
+
+          <h3>Section &amp; budget</h3>
+          <ol class="steps">
+            <li>Tap <strong>Kitchen</strong>, <strong>Bar</strong>, or <strong>Retail</strong> (clears unsaved lines).</li>
+            <li>Kitchen/Bar: review <strong>PO budget</strong> (monthly cap, today remaining).</li>
+          </ol>
+
+          <h3>Supplier, header, products, save</h3>
+          <ol class="steps">
+            <li><strong>Choose supplier</strong> from search list.</li>
+            <li>Fill header: Purchase Date, Branch, Required Date, optional notes.</li>
+            <li>Add lines: scan barcode (tablet) or product search; set qty, discounts, VAT.</li>
+            <li>Tap <strong>Create purchase order</strong>; then <strong>Sync</strong>.</li>
+            <li>Recent POs: Edit, Export PDF, Share PDF.</li>
+          </ol>
+
+          <div class="carousel reveal-img" data-carousel tabindex="0" aria-label="Purchase order slideshow">
+            <div class="carousel-header"><p class="carousel-title">Purchase order — full workflow</p></div>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/po-section-budget.png" alt="PO section tabs and budget card" width="800" height="450" />
+                  </div>
+                  <figcaption>Section + budget</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/po-supplier.png" alt="Supplier picker search list" width="800" height="450" />
+                  </div>
+                  <figcaption>Supplier picker</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/po-barcode.png" alt="Barcode scanner on purchase order" width="800" height="500" />
+                  </div>
+                  <figcaption>Barcode scan (tablet)</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/po-lines.png" alt="Purchase lines table with qty discount VAT" width="800" height="500" />
+                  </div>
+                  <figcaption>Line items</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/po-lines-fullscreen.png" alt="Purchase lines table fullscreen" width="800" height="500" />
+                  </div>
+                  <figcaption>Lines fullscreen</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/po-create-total.png" alt="Create purchase order and grand total" width="800" height="450" />
+                  </div>
+                  <figcaption>Create PO + total</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/po-recent-pdf.png" alt="Recent PO list with export PDF" width="800" height="450" />
+                  </div>
+                  <figcaption>Recent PO + PDF</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/po-pdf-preview.png" alt="Generated purchase order PDF" width="800" height="550" />
+                  </div>
+                  <figcaption>PO PDF document</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button type="button" class="carousel-btn" data-carousel-prev>Previous</button>
+              <div class="carousel-dots"></div>
+              <span class="carousel-counter" data-carousel-counter>1 / 8</span>
+              <button type="button" class="carousel-btn" data-carousel-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section reveal" id="po-receive">
+          <h2>PO receive</h2>
+          <div class="callout callout--role"><strong>Manager/admin only.</strong></div>
+          <p>Receive <strong>today’s</strong> purchase orders into inventory. Edit qty and unit price before posting.</p>
+          <ol class="steps">
+            <li>Open <strong>PO receive</strong>; select section.</li>
+            <li>Expand a PO sequence.</li>
+            <li>Select lines; adjust qty/price if needed.</li>
+            <li><strong>Receive selected</strong> or <strong>Receive all</strong>.</li>
+            <li>Sync; verify Stock on hand / Stock movement.</li>
+          </ol>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/po-receive-list.png" alt="PO receive list for section" width="800" height="450" />
+            </div>
+            <figcaption>PO receive list</figcaption>
+          </figure>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/po-receive-expanded.png" alt="Expanded PO with receive checkboxes" width="800" height="500" />
+            </div>
+            <figcaption>Expanded PO — receive lines</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="expenses">
+          <h2>Expenses</h2>
+          <div class="callout callout--role"><strong>Manager/admin only.</strong></div>
+          <p>Record expenses manually or from <strong>received POs</strong>. PO lines do not add stock again.</p>
+          <ol class="steps">
+            <li>Pick section; set contact and chart of accounts.</li>
+            <li>Add manual lines or import from received PO.</li>
+            <li>Review staged list; Save; Sync.</li>
+          </ol>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/expenses-staged.png" alt="Staged expense lines before save" width="800" height="500" />
+            </div>
+            <figcaption>Staged expenses</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="production">
+          <h2>Production</h2>
+          <p>Log runs from BOM: form, production log (Planned / Completed today), ingredient recipe table.</p>
+          <ol class="steps">
+            <li>Search BOM product; set target amount; Planned or Completed.</li>
+            <li>Tap <strong>+ Add production log</strong>.</li>
+            <li>Select run in log; view ingredients; Complete / Delete as needed.</li>
+            <li>Sync after changes.</li>
+          </ol>
+          <div class="carousel reveal-img" data-carousel tabindex="0" aria-label="Production slideshow">
+            <div class="carousel-header"><p class="carousel-title">Production — step by step</p></div>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/production-form.png" alt="Production form BOM search target amount" width="800" height="500" />
+                  </div>
+                  <figcaption>New production log form</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/production-log.png" alt="Production log Planned and Completed sections" width="800" height="500" />
+                  </div>
+                  <figcaption>Production log</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/production-ingredients.png" alt="Production ingredients table for run" width="800" height="450" />
+                  </div>
+                  <figcaption>Ingredients for selected run</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/production-overview.png" alt="Full production screen layout" width="800" height="550" />
+                  </div>
+                  <figcaption>Full layout (tablet)</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button type="button" class="carousel-btn" data-carousel-prev>Previous</button>
+              <div class="carousel-dots"></div>
+              <span class="carousel-counter" data-carousel-counter>1 / 4</span>
+              <button type="button" class="carousel-btn" data-carousel-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section reveal" id="sales-inventory">
+          <h2>Sales inventory</h2>
+          <div class="callout callout--role"><strong>Manager/admin only.</strong> Staff may not load sales data.</div>
+          <ol class="steps">
+            <li>Reload sales data.</li>
+            <li>Filter by date or view all pending.</li>
+            <li>Select lines; Process selected or Process all.</li>
+            <li>Sync; check Warning log for unmapped menus.</li>
+          </ol>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/sales-pending.png" alt="Pending sales lines with process buttons" width="800" height="500" />
+            </div>
+            <figcaption>Pending sales + Process</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="stock-opname">
+          <h2>Stock opname (Kitchen · Bar · Retail)</h2>
+          <p>Physical count per section. On-hand updates only after manager <strong>approval</strong>.</p>
+          <div class="callout callout--web"><strong>On web:</strong> product search only — no barcode.</div>
+          <ol class="steps">
+            <li>Open section opname; Reload if products empty.</li>
+            <li>Scan or search product; enter counted qty; Add count line.</li>
+            <li>Submit for approval when complete; Sync regularly.</li>
+          </ol>
+          <div class="carousel reveal-img" data-carousel tabindex="0" aria-label="Stock opname slideshow">
+            <div class="carousel-header"><p class="carousel-title">Stock opname — count workflow</p></div>
+            <div class="carousel-viewport">
+              <div class="carousel-track">
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/opname-header.png" alt="Stock opname session and status" width="800" height="400" />
+                  </div>
+                  <figcaption>Session + status</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/opname-scanner.png" alt="Barcode scanner on stock opname" width="800" height="500" />
+                  </div>
+                  <figcaption>Scanner (tablet)</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/opname-search-add.png" alt="Product search and Add count line" width="800" height="500" />
+                  </div>
+                  <figcaption>Search + add line</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/opname-today-list.png" alt="Todays counts list Draft status" width="800" height="500" />
+                  </div>
+                  <figcaption>Today’s counts</figcaption>
+                </figure>
+                <figure class="carousel-slide">
+                  <div class="img-frame">
+                    <img src="images/opname-submit.png" alt="Submit for approval button" width="800" height="400" />
+                  </div>
+                  <figcaption>Submit for approval</figcaption>
+                </figure>
+              </div>
+            </div>
+            <div class="carousel-controls">
+              <button type="button" class="carousel-btn" data-carousel-prev>Previous</button>
+              <div class="carousel-dots"></div>
+              <span class="carousel-counter" data-carousel-counter>1 / 5</span>
+              <button type="button" class="carousel-btn" data-carousel-next>Next</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="doc-section reveal" id="opname-approval">
+          <h2>Opname approval</h2>
+          <div class="callout callout--role"><strong>Manager/admin only.</strong></div>
+          <ol class="steps">
+            <li>Select section; optional date filter.</li>
+            <li>Expand session; edit qty if needed.</li>
+            <li>Approve or Reject; Sync; export CSV/PDF if needed.</li>
+          </ol>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/opname-approve-session.png" alt="Opname approval expanded session" width="800" height="500" />
+            </div>
+            <figcaption>Approve session</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="stock-on-hand">
+          <h2>Stock on hand</h2>
+          <p>Read-only balances by section. Search to filter products.</p>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/on-hand.png" alt="Stock on hand table with search" width="800" height="500" />
+            </div>
+            <figcaption>Stock on hand</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="stock-movement">
+          <h2>Stock movement</h2>
+          <p>Ledger of ins/outs. Filter Kitchen / Bar / Retail / All; search product, type, or reference.</p>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/stock-movement.png" alt="Stock movement ledger list" width="800" height="500" />
+            </div>
+            <figcaption>Stock movement</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="warnings">
+          <h2>Warning log</h2>
+          <p>Device-local warnings (unmapped sales, negative stock, etc.). Clear after review.</p>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/warnings.png" alt="Warning log entries" width="800" height="450" />
+            </div>
+            <figcaption>Warning log</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="waste">
+          <h2>Waste (Kitchen · Bar · Retail)</h2>
+          <p>Record <strong>today’s</strong> waste per section. Reduces stock on sync.</p>
+          <div class="callout callout--web"><strong>On web:</strong> search + manual qty only.</div>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/waste-form.png" alt="Waste form with scanner" width="800" height="500" />
+            </div>
+            <figcaption>Waste entry (tablet)</figcaption>
+          </figure>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/waste-today.png" alt="Todays waste entries list" width="800" height="450" />
+            </div>
+            <figcaption>Today’s waste list</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="master-data">
+          <h2>Master data</h2>
+          <div class="callout callout--role"><strong>Admin only.</strong></div>
+          <p>Sections: All Product, Purchase Products, BOM, Supplier List, Chart of Accounts, PO Budget.</p>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/master-data-sections.png" alt="Master data section chips" width="800" height="400" />
+            </div>
+            <figcaption>Master data sections</figcaption>
+          </figure>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/master-data-bom.png" alt="BOM recipe editor" width="800" height="500" />
+            </div>
+            <figcaption>BOM editor</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="admin-panel">
+          <h2>Admin panel</h2>
+          <div class="callout callout--role"><strong>Admin only.</strong></div>
+          <p>Invite users, assign roles, view activity log.</p>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/admin-invite.png" alt="Admin invite by email form" width="800" height="450" />
+            </div>
+            <figcaption>Invite user</figcaption>
+          </figure>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/admin-users.png" alt="User directory with roles" width="800" height="500" />
+            </div>
+            <figcaption>User list</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="app-settings">
+          <h2>App settings</h2>
+          <p><strong>Account</strong> (email, role, sign out) and <strong>Appearance</strong> (Light / Dark / System).</p>
+          <div class="callout callout--role"><strong>Admin only:</strong> data connection details and Reload all data.</div>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/settings-account.png" alt="Settings account and appearance" width="800" height="450" />
+            </div>
+            <figcaption>Account &amp; theme</figcaption>
+          </figure>
+          <figure class="figure-single">
+            <div class="img-frame reveal-img">
+              <img src="images/settings-reload.png" alt="Settings data connection Reload all data" width="800" height="450" />
+            </div>
+            <figcaption>Reload all data (admin)</figcaption>
+          </figure>
+        </section>
+
+        <section class="doc-section reveal" id="appendix">
+          <h2>Appendix</h2>
+          <h3>Role summary</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Feature</th><th>staff</th><th>manager</th><th>admin</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Stock opname entry</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                <tr><td>Approve opname</td><td></td><td>✓</td><td>✓</td></tr>
+                <tr><td>Create PO</td><td>✓</td><td>✓</td><td>✓</td></tr>
+                <tr><td>PO receive / Expenses</td><td></td><td>✓</td><td>✓</td></tr>
+                <tr><td>Sales process / COGS</td><td></td><td>✓</td><td>✓</td></tr>
+                <tr><td>Reports PDF</td><td></td><td>✓</td><td>✓</td></tr>
+                <tr><td>Master data / Admin</td><td></td><td></td><td>✓</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Web vs tablet</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr><th>Screen</th><th>Tablet</th><th>Web</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>PO / opname / waste barcode</td><td>✓</td><td>Search only</td></tr>
+                <tr><td>Share PDF</td><td>Share sheet</td><td>Download</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <h3>Image filenames</h3>
+          <p class="callout callout--info">
+            Drop PNG screenshots into <code>images/</code> using the filenames referenced in this page (e.g.
+            <code>login-01.png</code>, <code>po-barcode.png</code>). Missing files show a styled placeholder until you add
+            them.
+          </p>
+        </section>
+
+        <footer class="site-footer">
+          <p>Tiny App Suite Operations Manual · Tiny Healthy Family Cafe · Static docs for GitHub Pages</p>
+        </footer>
+      </main>
+    </div>
+
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Image preview">
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Close preview">×</button>
+      <img id="lightbox-img" src="" alt="" />
+      <p class="lightbox-caption" id="lightbox-caption"></p>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
