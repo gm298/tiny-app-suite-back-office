@@ -67,39 +67,39 @@
   const modules = {
     1: {
       name: "Smart Purchasing",
-      desc: "Sectioned POs with budget caps and barcode scanning so ordering and receiving feel effortless.",
+      desc: "Sectioned purchase orders with monthly budget caps—barcode scanning makes ordering and receiving fast (and paperless).",
       image: "images/module-1.png",
-      sub: ["Purchase Orders", "Barcode scanning", "Budgets & limits"],
+      sub: ["Purchase Orders", "PO receive", "Barcode scanning", "Budgets & limits"],
     },
     2: {
       name: "Production (Plan → Produce)",
-      desc: "Plan what you want to make, and the app calculates ingredient quantities from your BOM—consistent results, less waste.",
+      desc: "Choose how much to produce. Tiny calculates ingredient quantities from your BOM so taste stays consistent and waste drops.",
       image: "images/module-2.png",
-      sub: ["Production planning", "BOM-based qty", "Ingredient depletion"],
+      sub: ["Production log", "Production ingredients", "BOM-based qty", "Auto-depletion"],
     },
     3: {
       name: "Sales & COGS Hub",
-      desc: "Sync daily sales and get instant Food & Beverage profit-margin insights tied to ingredient usage.",
+      desc: "Sync daily sales and instantly see Food & Beverage margins, COGS, and exports—so managers run the numbers, fast.",
       image: "images/module-3.png",
-      sub: ["POS sync", "COGS & margins", "Sales performance"],
+      sub: ["Sales sync", "COGS calculator", "Reports", "Profit margins"],
     },
     4: {
       name: "Rapid Stock Opname",
-      desc: "Fast physical counts per section with an approve/reject flow—no more messy paper stocktakes.",
+      desc: "Run physical counts per section, submit for approval, and keep stock on hand accurate—no more messy paper stocktakes.",
       image: "images/module-4.png",
-      sub: ["Stock counts", "Approve/reject", "Stock on hand"],
+      sub: ["Stock opname", "Approve/reject flow", "Stock on hand", "Stock movement"],
     },
     5: {
       name: "Waste & Loss Logging",
-      desc: "Log waste and losses quickly with reasons so costs stay visible and controllable.",
+      desc: "Log waste and losses quickly with reasons—keep costs visible, track improvements, and reduce unnecessary prep.",
       image: "images/module-5.png",
-      sub: ["Waste logging", "Daily waste view", "Warning log impact"],
+      sub: ["Waste count", "Daily waste view", "Warning log", "Expenses & adjustments"],
     },
     6: {
       name: "Master Data & Settings",
-      desc: "Keep items, BOM, and shelf-life rules clean—plus role-based access and offline-first sync.",
+      desc: "Keep items and BOM clean, manage shelf-life rules, and control roles—offline-first sync keeps everything moving.",
       image: "images/module-6.png",
-      sub: ["Items & BOM", "Shelf-life rules", "Roles & sync"],
+      sub: ["Items & BOM", "Shelf-life rules", "User roles", "Admin invites", "App settings"],
     },
   };
 
