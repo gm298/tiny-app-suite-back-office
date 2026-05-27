@@ -48,6 +48,22 @@
             </div>
           </div>
           <div class="hero-visual">
+            <div class="cost-chart-card" aria-live="polite">
+              <p class="cost-chart-title">Manage Costs and Increase Efficiency</p>
+              <div class="cost-chart-toggle" role="group" aria-label="Cost comparison toggle">
+                <button type="button" class="chart-btn is-active" data-cost="40">Before Tiny</button>
+                <button type="button" class="chart-btn" data-cost="30">After Tiny</button>
+              </div>
+              <div class="cost-chart-wrap">
+                <div class="cost-pie" id="cost-pie" style="--cost: 40">
+                  <span class="cost-pie-center" id="cost-pie-center">40% Cost</span>
+                </div>
+                <div class="cost-legend">
+                  <p><span class="legend-dot legend-dot--cost"></span>Costs: <strong id="cost-value">40%</strong></p>
+                  <p><span class="legend-dot legend-dot--revenue"></span>Revenue: <strong id="revenue-value">60%</strong></p>
+                </div>
+              </div>
+            </div>
             <div class="device-frame">
               <img
                 src="images/home-full.png"
@@ -143,13 +159,10 @@
                 No, but it’s the match your kitchen team has been waiting for.
               </p>
               <p style="color: var(--text-secondary); margin: 0 0 14px">
-                Many venues spend hours writing manual purchase orders, cross-checking recipes, and guessing stock
-                levels. This takes a lot of time and is prone to human error. Tiny Back Office is your digital kitchen
-                hand that never misses a cost, calculates your COGS automatically, and keeps your operational sanity
-                intact.
+                Many venues spend hours going through multiple tedious steps from writing manual orders, creating purchase 			orders, cross-checking recipes, and guessing stock levels. This takes a lot of time and is prone to human error. 		Tiny Back Office is your digital kitchen hand that never misses a cost, calculates your COGS automatically, and 		keeps your operational sanity intact.
               </p>
               <h3 style="font-size: 1.1rem; margin: 28px 0 8px">A Label of Love (For Your Bottom Line)</h3>
-              <p class="pull-quote">“We track the pennies, so you can make the pounds.”</p>
+              <p class="pull-quote">“We track the cents, so you can make the dollars.”</p>
               <p style="color: var(--text-secondary); margin: 0">
                 Tiny Back Office is built tablet-first with a sleek dark UI designed to handle the heat of real-time
                 kitchen operations. It bridges the gap between what you buy, what you prep, and what you sell. By
@@ -198,7 +211,7 @@
                   <td>Production Planning</td>
                   <td>
                     Tell the app how much you would like to produce, and it calculates the quantity needed for each
-                    ingredient from your BOM.
+                    ingredient from your Recipes.
                   </td>
                   <td><strong>Consistent taste:</strong> ditch paper checklists, prep the right amounts every time—minimize waste.</td>
                 </tr>
@@ -223,7 +236,7 @@
                   <td><strong>Instant impact:</strong> updates stock and COGS the moment it’s recorded.</td>
                 </tr>
                 <tr>
-                  <td>Rapid Stock Opname</td>
+                  <td>Rapid Stock Adjustments</td>
                   <td>Seamless physical counts per section.</td>
                   <td><strong>Approve/reject flow:</strong> staff counts, managers approve. Zero data errors.</td>
                 </tr>
@@ -339,7 +352,7 @@
             venue's operations.
           </p>
           <div class="cta-buttons">
-            <a href="mailto:sales@tinyhealthyfamily.com?subject=Tiny%20Back%20Office%20Demo" class="btn btn--primary"
+            <a href="mailto:hello@tinyhealthycafe.com?subject=Tiny%20Back%20Office%20Demo" class="btn btn--primary"
               >Contact Sales</a
             >
             <a href="../" class="btn btn--ghost">Try the live app</a>
@@ -356,7 +369,7 @@
           <a href="../">App</a>
           <a href="../manual/">Manual</a>
           <a href="#top">Back to top</a>
-          <a href="mailto:sales@tinyhealthyfamily.com">sales@tinyhealthyfamily.com</a>
+          <a href="mailto:Hello@tinyhealthycafe.com">Hello@tinyhealthycafe.com</a>
         </div>
       </div>
     </footer>

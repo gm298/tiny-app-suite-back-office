@@ -311,6 +311,131 @@ main {
   filter: blur(40px);
 }
 
+.cost-chart-card {
+  margin-bottom: 18px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: rgba(30, 41, 59, 0.55);
+  box-shadow: var(--shadow-lg);
+  padding: 18px 18px 14px;
+}
+
+.cost-chart-title {
+  margin: 0 0 12px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.cost-chart-toggle {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.chart-btn {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(15, 23, 42, 0.45);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), color var(--transition),
+    transform var(--transition);
+}
+
+.chart-btn:hover {
+  transform: translateY(-1px);
+}
+
+.chart-btn.is-active {
+  background: rgba(37, 99, 235, 0.18);
+  border-color: rgba(37, 99, 235, 0.75);
+  color: #dbeafe;
+}
+
+.cost-chart-wrap {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.cost-pie {
+  --cost: 40;
+  width: 240px;
+  height: 240px;
+  margin-inline: auto;
+  border-radius: 999px;
+  background: conic-gradient(
+    from -90deg,
+    #ef4444 0% calc(var(--cost) * 1%),
+    #22c55e calc(var(--cost) * 1%) 100%
+  );
+  position: relative;
+}
+
+.cost-pie::after {
+  content: "";
+  position: absolute;
+  inset: 18%;
+  border-radius: 999px;
+  background: rgba(2, 6, 23, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.cost-pie-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-weight: 950;
+  font-size: 16px;
+  text-align: center;
+  width: 90%;
+}
+
+.cost-legend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 18px;
+  justify-content: center;
+  max-width: 280px;
+  margin-inline: auto;
+  padding-top: 2px;
+}
+
+.cost-legend p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  margin-right: 8px;
+  position: relative;
+  top: 1px;
+}
+
+.legend-dot--cost {
+  background: #ef4444;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.12);
+}
+
+.legend-dot--revenue {
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.12);
+}
+
 .device-frame {
   border-radius: 16px;
   border: 1px solid var(--border);
@@ -577,6 +702,11 @@ main {
   .hero-visual {
     max-width: 420px;
     margin-inline: auto;
+  }
+
+  .cost-pie {
+    width: 210px;
+    height: 210px;
   }
 
   .header-nav .nav-hide-mobile {
